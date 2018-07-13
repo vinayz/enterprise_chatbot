@@ -1,7 +1,7 @@
 var app = angular.module('empappChatApp', []);
 app.controller('empappChatCtrl', function($scope, $http, $compile, $window) {
     // var nodeServerUrl = "http://botuat.maxlifeinsurance.com/postdata";
-    var nodeServerUrl = "http://203.122.46.189:3000/postdata" ;
+    var nodeServerUrl = "http://10.1.255.255:3000/postdata" ;
     var botAvatar = "img/bot-icon-white.png";
     var userAvatar = "img/user-icon.png";
     var botTypingLoader = "img/chat_dots.gif";
