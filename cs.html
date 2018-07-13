@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Qualtech Assistant</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Style.css -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<body  ng-app="empappChatApp" ng-controller="empappChatCtrl">
+<section class="custom-chatbox">
+    <div class="chat-popup">
+        <div class="menu">
+            <div class="profile-pic">
+                <span class="pic"><img src="img/bot-icon-empapp.png" alt="profile-pic"></span>
+                <h5>Ask-Qualtech</h5>
+            </div>
+        </div>
+        <ol class="chat" id="chatResponseBox" schroll-bottom="scrollArr">
+        </ol>
+        <!-- <button class="success">Home</button> -->
+        <div class="inputBox">
+            <form ng-submit="sendChatData()" name="myForm">
+                <input ng-model="inputText" name="inputText" type="text" ng-pattern="/^[@%-_.?!',\x22/&+\w\s]*$/" autocomplete="off" placeholder="Write your text here...."/>
+                <div class="text-danger errorText" ng-show="myForm.inputText.$error.pattern">Special Characters are not allowed</div>
+                <div class="btn-submit"><button><img src="img/send-icon.png" alt="send_icon" ng-click="sendChatData()" ng-keyup="$event.keyCode == 13 && sendChatData()" class="send"></button></div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/angular-1.5.4.min.js"></script>
+<script src="js/cs.js"></script>
+</body>
+</html>
